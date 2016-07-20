@@ -6,4 +6,8 @@ pom.xml.next
 release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
+<<<<<<< HEAD
 .mvn/timing.properties
+=======
+.mvn/timing.properties
+>>>>>>> 49d395fe4ef03ac1b5f87c93261a9190be4ccb11
