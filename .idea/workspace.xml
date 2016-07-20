@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8617d5bd-748a-4e19-8af2-7b4081cca6c5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zoomdata/demo/Test.java" afterPath="$PROJECT_DIR$/src/main/java/com/zoomdata/demo/Test.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Zoomdata_AutoTests.iws" />
@@ -477,7 +476,7 @@
       <created>1469040427162</created>
       <option name="number" value="Default" />
       <updated>1469040427162</updated>
-      <workItem from="1469040428495" duration="1544000" />
+      <workItem from="1469040428495" duration="1565000" />
     </task>
     <task id="LOCAL-00001" summary="test IDEA push">
       <created>1469041949081</created>
@@ -485,11 +484,17 @@
       <option name="project" value="LOCAL" />
       <updated>1469041949081</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test IDEA push">
+      <created>1469041980303</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1469041980303</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1544000" />
+    <option name="totallyTimeSpent" value="1565000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
