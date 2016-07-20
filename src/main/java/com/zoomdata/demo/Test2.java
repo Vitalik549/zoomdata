@@ -1,4 +1,4 @@
 package com.zoomdata.demo;
 
-public class Test2 {
+public class Test2 { //
 }
