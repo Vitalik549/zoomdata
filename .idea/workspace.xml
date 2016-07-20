@@ -235,7 +235,7 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="options.lastSelected" value="settings.github" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="prop_add_unversioned_files" value="true" />
@@ -491,7 +491,7 @@
       <created>1469040427162</created>
       <option name="number" value="Default" />
       <updated>1469040427162</updated>
-      <workItem from="1469040428495" duration="1704000" />
+      <workItem from="1469040428495" duration="1819000" />
     </task>
     <task id="LOCAL-00001" summary="test IDEA push">
       <created>1469041949081</created>
@@ -529,11 +529,17 @@
       <option name="project" value="LOCAL" />
       <updated>1469042134566</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="test IDEA push">
+      <created>1469042138500</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1469042138500</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1704000" />
+    <option name="totallyTimeSpent" value="1819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
