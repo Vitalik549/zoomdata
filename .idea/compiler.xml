@@ -25,5 +25,8 @@
         <module name="Zoomdata_AutoTests" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Zoomdata_AutoTests" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
