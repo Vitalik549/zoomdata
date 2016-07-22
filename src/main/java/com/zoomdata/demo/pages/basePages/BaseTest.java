@@ -47,7 +47,7 @@ public class BaseTest {
     // may be firefox, chrome, opera, ie
     static final String BROWSER_NAME = System.getProperty("browser");
 
-    public void setUp() {
+    protected void setUp() {
         final Os os = getOs();
         initializeStaticFields();
         if (!useRemoteWebDriver) {

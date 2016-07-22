@@ -3,6 +3,7 @@ package com.zoomdata.demo.pages.basePages;
 import com.zoomdata.demo.helpers.CurrentEnvironment;
 import com.zoomdata.demo.helpers.WaitHelper;
 import com.zoomdata.demo.pages.HomePage;
+import com.zoomdata.demo.pages.LeftPaneMenu;
 import com.zoomdata.demo.pages.LoginPage;
 import com.zoomdata.demo.zoomComponents.User;
 import org.apache.log4j.Logger;
@@ -40,17 +41,17 @@ public class ZoomBaseTest extends BaseTest {
 
     @BeforeMethod
     public void loginAdmin(Method method) {
-        setUp();
+        setUpBrowser();
         LOGGER.info(Calendar.getInstance().getTime() + ": Test \"" + method.getDeclaringClass().getName() + "\" was started with user " + admin.getName());
         startTestDependingOnGroups(method);
     }
 
-    public void setUp() {
+    private void setUpBrowser() {
         super.setUp();
         WaitHelper.setImplicitWaitDefault(driver);
         driver.manage().timeouts().setScriptTimeout(10, TimeUnit.SECONDS);
         open(CurrentEnvironment.BASE_URL);
-        driver.manage().window().setPosition(new Point(1920, 24));
+        driver.manage().window().setPosition(new Point(1920, 24)); //to start tests in right monitor when 2 are available
         driver.manage().window().maximize();
     }
 
@@ -93,10 +94,12 @@ public class ZoomBaseTest extends BaseTest {
     }
 
 
-    protected MenuPage menu() {
-        return new MenuPage(driver).clickMenu();
+    protected LeftPaneMenu menu() {
+        return new MenuPage(driver).openLeftMenu();
     }
 
-
+    protected HomePage fromHome() {
+        return new HomePage(driver);
+    }
 
 }
