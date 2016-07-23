@@ -1,12 +1,12 @@
 package com.zoomdata.demo.pages;
 
-import com.codeborne.selenide.Condition;
 import com.zoomdata.demo.pages.basePages.MenuPage;
+import com.zoomdata.demo.zoomComponents.Chart;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.CollectionCondition.size;
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
@@ -41,6 +41,10 @@ public class HomePage extends MenuPage {
     public ChartPage openChart(String dataSource, String chartName) {
         $(getDataSource(dataSource)).find(getChart(chartName)).shouldBe(visible).click();
         return new ChartPage(driver);
+    }
+
+    public ChartPage openChart(Chart chart) {
+        return openChart(chart.getDataSource(), chart.getName());
     }
 
 

@@ -2,7 +2,6 @@ package com.zoomdata.demo.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import com.zoomdata.demo.helpers.StatusWebElem;
-import com.zoomdata.demo.pages.basePages.BasePage;
 import com.zoomdata.demo.pages.basePages.MenuPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,14 +24,9 @@ public class LeftPaneMenu extends MenuPage {
     private static By menuButton = By.xpath(".//*[contains(@value,'showSidePane')]");
 
     private static By favoritesButton = By.xpath(".//button[contains(.,'Favorites')]");
-    private static By dataSoucesButton = By.xpath(".//button[contains(.,'Data Sources')]");
+    private static By dataSousesButton = By.xpath(".//button[contains(.,'Data Sources')]");
 
-    //todo - probably bug should be reported (check with developers), replace "menuLeftPane" xpath with shorter one when problem fixed.
-    // when menu opened/closed several times on different pages - amount of menu panes increases in html, though all panes except one have "style: display: none". So selector.click() may fail, as invisible elements could be selected.
-    // so this huge xpath was created to find visible SidePane:  it is located in visible (style has 'display: block') div with class "sidepane".
     private static By menuLeftPane = By.xpath(".//div[contains(@class,'zd-side-pane')][.//ancestor::div[1][contains(@style,'display: block')][contains(@class,'sidepane')]]");
-    // todo same issue with dataSources
-
     private static String itemsPath = ".//div[contains(@class,'nav-tabs')][contains(@style,'display: block')]//ul[contains(@class,'nav-tabs')]//li";
     private static By dataSources = By.xpath(itemsPath + "[contains(@class,'sourceItem')]");
     private static By charts = By.xpath(itemsPath + "[contains(@class,'d-list-item')]");
@@ -58,7 +52,7 @@ public class LeftPaneMenu extends MenuPage {
     }
 
     public LeftPaneMenu clickDataSources() {
-        $(menuLeftPane).find(dataSoucesButton).shouldBe(visible).click();
+        $(menuLeftPane).find(dataSousesButton).shouldBe(visible).click();
         return this;
     }
 

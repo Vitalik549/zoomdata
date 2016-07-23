@@ -1,0 +1,35 @@
+
+    todo report following bugs:
+
+  *************** *************** *************** *************** *************** *************** ***************
+  Bug# 1
+  Description:  When time manually changed in From Current Time popup selector - scroller doesn't change position accordingly
+  Steps to reproduce:
+     1. access impalaSource, "Scatter Plot" chart
+     2. add timeBar pane with any time attribute
+     3. Click on current FROM value container (class= tooltipDatePicker-content left) triangle arrow
+     4. In opened popup change date to any higher one
+  Expected result (based on UX):  scroller to be automatically moved to correspondent value, chart update triggered
+  Actual result: scroller didn't change position though chart redraw was triggered
+
+  *************** *************** *************** *************** *************** *************** ***************
+  Bug# 2
+  Description: UI bug, From Current Time container is not visible (hides under from container) when From and To Containers located really close
+  Steps to reproduce:
+     1. access impalaSource, "Scatter Plot" chart
+     2. add timeBar pane with any time attribute
+     3. with scroller change time to almost same, as FROM time
+  Expected result: both current time value containers are visible for user
+  Actual result: from container hides under TO container, so user is not able to know current FROM value
+  Screenshot "UIScrollerBug.png" is located in <bugReport> package.
+
+  *************** *************** *************** *************** *************** *************** ***************
+    Bug# 3 (to check with developers, possibly bug)
+    Description: Side pane html element added to html on each page change and removed only when page refreshed
+    Steps to reproduce:
+       1. open any chart
+       2. return to home page
+       3. repeat points 1-2 several times
+    Expected result: 1 html element representing side menu in html is expected to exist at any moment
+    Actual result: after each 1-2 steps cycle - 1 more html element created for menu pane (with class "sidepane")
+    After bug fixed: on MenuPage replace "menuLeftPane" and "dataSources" paths with shorter ones

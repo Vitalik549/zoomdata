@@ -2,6 +2,7 @@ package com.zoomdata.demo.pages.basePages;
 
 import com.zoomdata.demo.helpers.CurrentEnvironment;
 import com.zoomdata.demo.helpers.WaitHelper;
+import com.zoomdata.demo.pages.ChartPage;
 import com.zoomdata.demo.pages.HomePage;
 import com.zoomdata.demo.pages.LeftPaneMenu;
 import com.zoomdata.demo.pages.LoginPage;
@@ -36,6 +37,7 @@ public class ZoomBaseTest extends BaseTest {
     //pages used in tests
     protected LoginPage loginPage;
     protected HomePage homePage;
+    protected ChartPage chartPage;
 
     private static final Logger LOGGER = Logger.getLogger(ZoomBaseTest.class);
 

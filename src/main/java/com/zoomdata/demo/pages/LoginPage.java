@@ -1,12 +1,11 @@
 package com.zoomdata.demo.pages;
 
-import com.codeborne.selenide.Condition;
 import com.zoomdata.demo.pages.basePages.BasePage;
 import com.zoomdata.demo.zoomComponents.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
 public class LoginPage extends BasePage{

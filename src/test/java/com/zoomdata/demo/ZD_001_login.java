@@ -9,7 +9,4 @@ public class ZD_001_login extends ZoomBaseTest{
     public void loginSuccess() {
         login().user(admin).checkUserLoggedIn(true).checkDataSourcesAmount(2);
     }
-
-
-
 }

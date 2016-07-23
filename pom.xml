@@ -13,7 +13,7 @@
         <aspectj.version>1.8.7</aspectj.version>
         <allure.version>1.8.6</allure.version>
         <maven_plugin.version>2.2</maven_plugin.version>
-        <selenium_drivers.version>2.53.0</selenium_drivers.version>
+        <selenium_drivers.version>2.53.1</selenium_drivers.version>
         <testNG.version>6.9.6</testNG.version>
     </properties>
 

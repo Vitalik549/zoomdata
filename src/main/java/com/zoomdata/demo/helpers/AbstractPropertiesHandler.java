@@ -1,5 +1,6 @@
 package com.zoomdata.demo.helpers;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
@@ -33,6 +34,8 @@ public abstract class AbstractPropertiesHandler {
         if (properties.getProperty(propertyKey).equals("")) {
             return null;
         }
-        return properties.getProperty(propertyKey);
+
+
+        return StringUtils.isNotEmpty(System.getenv(propertyKey)) ? System.getenv(propertyKey) : properties.getProperty(propertyKey);
     }
 }

@@ -15,6 +15,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
 import org.openqa.selenium.remote.CapabilityType;
@@ -55,14 +56,14 @@ public class BaseTest {
         }
         initialiseWebDriver();
         WebDriverRunner.setWebDriver(driver); //for selenide purposes
-        Configuration.reportsFolder = "./target/screenshots";
-        Configuration.screenshots = false;
+        Configuration.reportsFolder = properties.getEnvProperty(STORE_SCREEN_TO);
+        //Configuration.screenshots = true;
     }
 
     private enum Os {
 
-        WINDOWS32("webdriver/", "chromedriver_win32", "IEDriverServer", ".exe"),
-        WINDOWS64("webdriver/", "chromedriver_win32", "IEDriverServer", ".exe"),
+        WINDOWS32("webdriver/", "chromedriver_win32", "IEDriverServer_64", ".exe"),
+        WINDOWS64("webdriver/", "chromedriver_win32", "IEDriverServer_32", ".exe"),
         LINUX32("webdriver/", "chromedriver_linux32", null, ""),
         LINUX64("webdriver/", "chromedriver_linux64", null, ""),
         MACOS32("webdriver/", "chromedriver_32", null, "");
@@ -70,11 +71,13 @@ public class BaseTest {
         private final String chromePath;
         private final String prefix;
         private final String suffix;
+        private final String iePath;
 
         Os(String prefix, String chromePath, String iePath, String suffix) {
             this.prefix = prefix;
             this.chromePath = chromePath;
             this.suffix = suffix;
+            this.iePath = iePath;
         }
     }
 
@@ -189,7 +192,11 @@ public class BaseTest {
                     + capability.getVersion()
                     + ", " + capability.getPlatform());
             driver = new ChromeDriver(setCapabilities(capability));
-        } else if (browser.equalsIgnoreCase("opera")) {
+        } else if (browser.equalsIgnoreCase("internetexplorer")) {
+            Os os = getOs();
+            System.setProperty("webdriver.ie.driver", "./src/test/resources/"  + os.prefix + os.iePath + os.suffix);
+            capability = DesiredCapabilities.internetExplorer();
+            driver = new InternetExplorerDriver(setCapabilities(capability));
         } else {
             final String msg = "No proper browser settings, check environment.properties";
             LOGGER.error(msg);

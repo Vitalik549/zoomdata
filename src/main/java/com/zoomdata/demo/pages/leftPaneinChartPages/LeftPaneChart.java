@@ -63,9 +63,9 @@ public class LeftPaneChart extends MenuPage {
         return new PopupChartStylePage(driver);
     }
 
-    public ChartPage clickTimeBar() {
+    public PopupTimeBarPage clickTimeBar() {
         clickControlButton(TIME_BAR);
-        return new ChartPage(driver);
+        return new PopupTimeBarPage(driver);
     }
 
     private void clickControlButton(String button) {
