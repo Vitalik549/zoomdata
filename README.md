@@ -20,7 +20,7 @@ Allure reporting tool may be used, but not required.
 
 ###How to start test execution in IDE:  
 1. To run full test suite: make right click on testng.xml file > Run with testNG  
-2. To run separate package/class: make rightc lick on package/class file > Run with testNG  
+2. To run separate package/class: make right click on package/class file > Run with testNG
 
 
 ###How to start test execution in cmd:  
