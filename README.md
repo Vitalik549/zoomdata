@@ -36,3 +36,7 @@ Where:
 - ```firefox```  
 - ```internetexplorer```  
 If no browser property set - tests will be executed in **chrome** by a default.  
+
+
+###Bug reports:
+Possible :beetle: bugs found in application reported in package  [bugReport](https://github.com/Vitalik549/zoomdata/tree/master/bugReport)
