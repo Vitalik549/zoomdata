@@ -49,8 +49,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8892508" vertical-offset="236" max-vertical-offset="884">
-              <caret line="46" column="194" selection-start-line="46" selection-start-column="194" selection-end-line="46" selection-end-column="194" />
+            <state vertical-scroll-proportion="0.8338762" vertical-offset="270" max-vertical-offset="884">
+              <caret line="46" column="196" selection-start-line="46" selection-start-column="196" selection-end-line="46" selection-end-column="196" />
               <folding />
             </state>
           </provider>
@@ -1321,7 +1321,7 @@
       <workItem from="1469313086976" duration="6424000" />
       <workItem from="1469322002732" duration="1426000" />
       <workItem from="1469346411711" duration="17107000" />
-      <workItem from="1469374608115" duration="2008000" />
+      <workItem from="1469374608115" duration="2036000" />
     </task>
     <task id="LOCAL-00001" summary="test IDEA push">
       <created>1469041949081</created>
@@ -1479,11 +1479,17 @@
       <option name="project" value="LOCAL" />
       <updated>1469375461715</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="allure REad">
+      <created>1469376634113</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1469376634113</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77402000" />
+    <option name="totallyTimeSpent" value="77430000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1544,7 +1550,8 @@
     <MESSAGE value="rread" />
     <MESSAGE value="task5" />
     <MESSAGE value="test5" />
-    <option name="LAST_COMMIT_MESSAGE" value="test5" />
+    <MESSAGE value="allure REad" />
+    <option name="LAST_COMMIT_MESSAGE" value="allure REad" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1964,8 +1971,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8892508" vertical-offset="236" max-vertical-offset="884">
-          <caret line="46" column="194" selection-start-line="46" selection-start-column="194" selection-end-line="46" selection-end-column="194" />
+        <state vertical-scroll-proportion="0.8338762" vertical-offset="270" max-vertical-offset="884">
+          <caret line="46" column="196" selection-start-line="46" selection-start-column="196" selection-end-line="46" selection-end-column="196" />
           <folding />
         </state>
       </provider>
