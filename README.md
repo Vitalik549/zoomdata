@@ -26,10 +26,13 @@ Allure reporting tool may be used, but not required.
 ###How to start test execution in cmd:  
 0. Open cmd :wink:  
 1. go to local root project directory  
-2. execute next script:  
-```  mvn clean test -Dtest=%classname -Dbrowser=%browsername  ```  
+2. execute next command:  
+```  mvn clean test -Dtest=%classname -Dbrowser=%browsername  ``` 
 
-Where:  
+Where:   
 ``` %classname```  - name of the test class  
-``` %browsername```  - indicate browser in which tests should be executed, possible values: chrome, firefox, internetexplorer.  
+``` %browsername```  - indicate browser in which tests should be executed, possible values: 
+- ```chrome```  
+- ```firefox```  
+- ```internetexplorer```  
 If no browser property set - tests will be executed in **chrome** by a default.  
