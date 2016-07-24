@@ -30,7 +30,7 @@ Allure reporting tool may be used, but not required.
 ```  mvn clean test -Dtest=%classname -Dbrowser=%browsername  ``` 
 
 Where:   
-``` %classname```  - name of the test class  
+``` %classname```  - name of the test class   
 ``` %browsername```  - indicate browser in which tests should be executed, possible values: 
 - ```chrome```  
 - ```firefox```  
