@@ -47,4 +47,14 @@ Please ensure that test run was executed with 'site' goal in order to generate a
 
 :warning: Warning: Please open **index.html** file with firefox browser, as it's won't be shown correctly in chrome.    
 
-If test run was started without ```site``` goal or  **index.html** file was not created after test run finished - it's possible to   create reports by executing ```mvn site``` in cmd from project root directory.   
+If test run was started without ```site``` goal or  **index.html** file was not created after test run finished - it's possible to   create reports by executing ```mvn site``` in cmd from project root directory.
+
+
+###Tests description:
+Each test located in separate class.
+Each test started from homePage (user already logged in), except @Tests with groupName 'GENERAL', which will start from login page.
+By a default to start any action from home page - two methods allowed:
+1. fromHome() - returns homePage
+2. menu() - opens hamburger menu and returns leftMenuPage
+After each test browser will be automatically closed.
+Upon each test failure - screenshot named with className + timeFailure (and page html code) will be stored to target directory, mentioned in property "store_screen_to".

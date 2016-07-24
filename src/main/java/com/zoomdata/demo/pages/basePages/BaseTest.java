@@ -57,7 +57,7 @@ public class BaseTest {
         initialiseWebDriver();
         WebDriverRunner.setWebDriver(driver); //for selenide purposes
         Configuration.reportsFolder = properties.getEnvProperty(STORE_SCREEN_TO);
-        //Configuration.screenshots = true;
+        Configuration.screenshots = false;
     }
 
     private enum Os {

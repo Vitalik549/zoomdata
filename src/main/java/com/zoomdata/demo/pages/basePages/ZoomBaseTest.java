@@ -32,7 +32,6 @@ public class ZoomBaseTest extends BaseTest {
 
     //all tests started from HomePage (user logged in), exceptions in beforeMethod
     public static final String GENERAL = "general";
-    public static final String SUPPLIER = "supplier";
 
     //pages used in tests
     protected LoginPage loginPage;

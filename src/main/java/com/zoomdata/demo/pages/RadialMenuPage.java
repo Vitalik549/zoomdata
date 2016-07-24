@@ -1,7 +1,5 @@
 package com.zoomdata.demo.pages;
 
-import com.zoomdata.demo.helpers.WaitHelper;
-import com.zoomdata.demo.pages.basePages.MenuPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
