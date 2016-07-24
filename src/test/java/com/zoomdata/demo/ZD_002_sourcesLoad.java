@@ -15,7 +15,7 @@ public class ZD_002_sourcesLoad extends ZoomBaseTest {
         menu().clickDataSources().checkDataSourcesAmountInMenu(2)
                 .clickDataSource(dataSource)
                 .checkChartsVisibility(VISIBLE, expectedCharts)
-                .clickChart(chartToBeLoaded).checkChartLoaded();
+                .openChart(chartToBeLoaded).checkChartLoaded();
     }
 
 

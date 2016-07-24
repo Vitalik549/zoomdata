@@ -35,7 +35,7 @@ public class LeftPaneMenu extends MenuPage {
         return  $(menuLeftPane).findAll(charts).filter(exactText(chartName)).first();
     }
 
-    public ChartPage clickChart(String chartName) {
+    public ChartPage openChart(String chartName) {
         getChart(chartName).shouldBe(visible).click();
         return new ChartPage(driver);
     }

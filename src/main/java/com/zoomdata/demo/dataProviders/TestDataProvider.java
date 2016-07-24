@@ -28,7 +28,7 @@ public class TestDataProvider {
 
     @DataProvider(name = DP_003_TABLE_VIEW_IN_BARS)
     private static Object[][] dp_003_tableViewInBars() {
-        return new Object[][]{{new Chart(sqlSource, "Bars", "Table")}};
+        return new Object[][]{{new Chart(sqlSource, "Bars", "Table"){{setGroupAttribute("City");}}}};
     }
 
     @DataProvider(name = DP_004_TIME_LINE)

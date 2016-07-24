@@ -7,6 +7,7 @@ public class Chart {
     private String chartStyle;
 
     private String timeAttribute;
+    private String groupAttribute;
 
     public Chart(String dataSource, String chartName) {
         this.name = chartName;
@@ -50,6 +51,15 @@ public class Chart {
     public void setTimeAttribute(String timeAttribute) {
         this.timeAttribute = timeAttribute;
     }
+
+    public String getGroupAttribute() {
+        return groupAttribute;
+    }
+
+    public void setGroupAttribute(String groupAttribute) {
+        this.groupAttribute = groupAttribute;
+    }
+
 
 
 }

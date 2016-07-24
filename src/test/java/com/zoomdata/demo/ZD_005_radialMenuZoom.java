@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 
 public class ZD_005_radialMenuZoom extends ZoomBaseTest {
 
-
     @Test(dataProviderClass = TestDataProvider.class, dataProvider = TestDataProvider.DP_005_RADIAL_MENU_ZOOM)
     public void zd_005_radialMenuZoom(Chart chart) {
         chartPage = fromHome()

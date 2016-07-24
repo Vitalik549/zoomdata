@@ -87,7 +87,6 @@ public class ChartPage extends MenuPage {
         return this;
     }
 
-
     public ChartPage checkTimeAttribute(String expectedTimeAttribute) {
         $(By.className("attr-indicator")).shouldHave(text(expectedTimeAttribute));
         return new ChartPage(driver);
@@ -182,7 +181,4 @@ public class ChartPage extends MenuPage {
         $(group2Value).shouldHave(text(expectedValue));
         return  this;
     }
-
-
-    // current time tooltipDatePicker-content
 }
