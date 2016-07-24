@@ -1,14 +1,14 @@
-# zoomdata
+# zoomdata  
 
-###Project description:
-Automation test project for regression testing of zoomdata application.
-1. Java + Maven + TestNG + Selenium + Selenide project.
-2. TestNG suite location: \src\test\resources\testng\testng.xml
-3. By a default suite would be executed in 5 parallel threads > could be changed in testng.xml, property <thread-count>
-4. Tests could be launched on Firefox, Chrome or IE browsers  
+###Project description:  
+**Automation test project for regression testing of zoomdata application.**  
+1. Java + Maven + TestNG + Selenium + Selenide project.  
+2. TestNG suite location: \src\test\resources\testng\testng.xml  
+3. By a default suite would be executed in 5 parallel threads > could be changed in testng.xml, property <thread-count>  
+4. Tests could be launched on Firefox, Chrome or IE browsers    
  :warning: Warning: firefox browser version 47.0.0 is not stackable with last webdriver version!  
  Please ensure than last firefox v.47.0.1 is installed on computer, where tests should be executed.  
-5. Remote git location is [here](https://github.com/Vitalik549/zoomdata/)
+5. Remote git location is [here](https://github.com/Vitalik549/zoomdata/)  
 
 
 Allure reporting tool may be used, but not required.
