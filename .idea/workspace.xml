@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8617d5bd-748a-4e19-8af2-7b4081cca6c5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/zoomdata/demo/pages/RadialMenuPage.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/zoomdata/demo/ZD_005_radialMenuZoom.java" />
-      <change type="DELETED" beforePath="D:\work\projects\Zoomdata_AutoTests\src\test\java\com\zoomdata\demo\ZD_005.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zoomdata/demo/pages/ChartPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/zoomdata/demo/pages/ChartPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zoomdata/demo/pages/basePages/MenuPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/zoomdata/demo/pages/basePages/MenuPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/zoomdata/demo/dataProviders/TestDataProvider.java" afterPath="$PROJECT_DIR$/src/main/java/com/zoomdata/demo/dataProviders/TestDataProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/zoomdata/demo/ZD_001_login.java" afterPath="$PROJECT_DIR$/src/test/java/com/zoomdata/demo/ZD_001_login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/zoomdata/demo/ZD_002_sourcesLoad.java" afterPath="$PROJECT_DIR$/src/test/java/com/zoomdata/demo/ZD_002_sourcesLoad.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/zoomdata/demo/ZD_003_tableViewInBars.java" afterPath="$PROJECT_DIR$/src/test/java/com/zoomdata/demo/ZD_003_tableViewInBars.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/zoomdata/demo/ZD_004_timeLine.java" afterPath="$PROJECT_DIR$/src/test/java/com/zoomdata/demo/ZD_004_timeLine.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Zoomdata_AutoTests.iml" afterPath="$PROJECT_DIR$/Zoomdata_AutoTests.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/log4j.properties" afterPath="$PROJECT_DIR$/src/test/resources/log4j.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/testng/testng.xml" afterPath="$PROJECT_DIR$/src/test/resources/testng/testng.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/velocity.log" afterPath="$PROJECT_DIR$/velocity.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Zoomdata_AutoTests.iws" />
@@ -50,13 +36,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ZD_005_radialMenuZoom.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ZD_005_radialMenuZoom.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/zoomdata/demo/ZD_005_radialMenuZoom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55607474" vertical-offset="0" max-vertical-offset="642">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
               <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
               <folding />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8892508" vertical-offset="236" max-vertical-offset="884">
+              <caret line="46" column="194" selection-start-line="46" selection-start-column="194" selection-end-line="46" selection-end-column="194" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
@@ -104,16 +103,6 @@
               <folding>
                 <element signature="e#1044#1045#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestDataProvider.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/zoomdata/demo/dataProviders/TestDataProvider.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="799">
-              <caret line="40" column="96" selection-start-line="40" selection-start-column="96" selection-end-line="40" selection-end-column="96" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -211,7 +200,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zoomdata/demo/pages/basePages/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/test/resources/properties/environment.properties" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/test/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/velocity.log" />
         <option value="$PROJECT_DIR$/target/site/allure-maven-plugin.html" />
@@ -227,6 +215,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zoomdata/demo/pages/RadialMenuPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zoomdata/demo/pages/ChartPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/zoomdata/demo/ZD_005_radialMenuZoom.java" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -1332,7 +1321,7 @@
       <workItem from="1469313086976" duration="6424000" />
       <workItem from="1469322002732" duration="1426000" />
       <workItem from="1469346411711" duration="17107000" />
-      <workItem from="1469374608115" duration="822000" />
+      <workItem from="1469374608115" duration="2008000" />
     </task>
     <task id="LOCAL-00001" summary="test IDEA push">
       <created>1469041949081</created>
@@ -1484,11 +1473,17 @@
       <option name="project" value="LOCAL" />
       <updated>1469323423047</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="test5">
+      <created>1469375461715</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1469375461715</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76216000" />
+    <option name="totallyTimeSpent" value="77402000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1547,7 +1542,9 @@
     <MESSAGE value="task 3 + navigation" />
     <MESSAGE value="test 4 + readMe + ie support + bugReport" />
     <MESSAGE value="rread" />
-    <option name="LAST_COMMIT_MESSAGE" value="rread" />
+    <MESSAGE value="task5" />
+    <MESSAGE value="test5" />
+    <option name="LAST_COMMIT_MESSAGE" value="test5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1815,17 +1812,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
           <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.607143" vertical-offset="0" max-vertical-offset="867">
-          <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/testng/testng.xml">
@@ -1968,10 +1956,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/zoomdata/demo/ZD_005_radialMenuZoom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55607474" vertical-offset="0" max-vertical-offset="642">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
           <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8892508" vertical-offset="236" max-vertical-offset="884">
+          <caret line="46" column="194" selection-start-line="46" selection-start-column="194" selection-end-line="46" selection-end-column="194" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
+        <state />
       </provider>
     </entry>
   </component>
