@@ -5,8 +5,8 @@
 2. TestNG suite location: \src\test\resources\testng\testng.xml
 3. By a default suite would be executed in 5 parallel threads > could be changed in testng.xml, property <thread-count>
 4. Tests could be launched on Firefox, Chrome or IE browsers
-#Warning: firefox browser version 47.0.0 is not stackable with last webdriver version!
-#Please ensure than last firefox v.47.0.1 is installed on computer, where tests should be executed.
+- Warning: firefox browser version 47.0.0 is not stackable with last webdriver version!
+Please ensure than last firefox v.47.0.1 is installed on computer, where tests should be executed.
 5. Remote git location : https://github.com/Vitalik549/zoomdata
 
 
