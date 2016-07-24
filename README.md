@@ -1,6 +1,6 @@
 # zoomdata
 
-Project description:
+###Project description:
 1. Java + Maven + TestNG + Selenium + Selenide project.
 2. TestNG suite location: \src\test\resources\testng\testng.xml
 3. By a default suite would be executed in 5 parallel threads > could be changed in testng.xml, property <thread-count>
@@ -13,7 +13,7 @@ Project description:
 Allure reporting tool may be used, but not required.
 
 
-How to start test execution:
+###How to start test execution:
 #Please ensure than Maven is installed on computer, where tests should be executed. (in command line execute "mvn --version")
 #Info how to install Maven: https://maven.apache.org/install.html
 
