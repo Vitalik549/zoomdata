@@ -28,23 +28,23 @@
 
 
 Where:   
-```%classname```  - name of the test class
-```site```  - maven goal to build allure reports
-```%browsername```  - indicate browser in which tests should be executed, possible values:
+```%classname```  - name of the test class  
+```site```  - maven goal to build allure reports  
+```%browsername```  - indicate browser in which tests should be executed, possible values:  
 - ```chrome```  
 - ```firefox```  
 - ```internetexplorer```  
 If no browser property set - tests will be executed in **chrome** by a default.  
-If no class name property provided - full test suite will be executed by a default.
+If no class name property provided - full test suite will be executed by a default.  
 
 
-###Bug reports:
-Possible :beetle: bugs found in application reported in package  [bugReport](https://github.com/Vitalik549/zoomdata/tree/master/bugReport)
+###Bug reports:  
+Possible :beetle: bugs found in application reported in package   [bugReport](https://github.com/Vitalik549/zoomdata/tree/master/bugReport)  
 
-###Allure reporting:
-Please ensure that test run was executed with 'site' goal in order to generate allure reports. File location is:
-> \target\site\allure-maven-plugin\index.hml
+###Allure reporting:  
+Please ensure that test run was executed with 'site' goal in order to generate allure reports. File location is:   
+> \target\site\allure-maven-plugin\index.hml  
 
-:warning: Warning: Please open **index.html** file with firefox browser, as it's won't be shown correctly in chrome.  
+:warning: Warning: Please open **index.html** file with firefox browser, as it's won't be shown correctly in chrome.    
 
-If test run was started without ```site``` goal or  **index.html** file was not created after test run finished - it's possible to create reports by executing ```mvn site``` in cmd from project root directory.  
+If test run was started without ```site``` goal or  **index.html** file was not created after test run finished - it's possible to   create reports by executing ```mvn site``` in cmd from project root directory.   
