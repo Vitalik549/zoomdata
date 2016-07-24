@@ -42,9 +42,9 @@ If no class name property provided - full test suite will be executed by a defau
 Possible :beetle: bugs found in application reported in package  [bugReport](https://github.com/Vitalik549/zoomdata/tree/master/bugReport)
 
 ###Allure reporting:
-If test run was executed in command line with ```site``` goal - allure report will be located in the next directory:
+Please ensure that test run was executed with 'site' goal in order to generate allure reports. File location is:
 > \target\site\allure-maven-plugin\index.hml
 
-:warning: Warning: Please open index.html file with firefox browser, as it's won't be shown correctly in chrome.  
+:warning: Warning: Please open **index.html** file with firefox browser, as it's won't be shown correctly in chrome.  
 
-If test run was started without ```site``` goal or  index.html file was not created after test run finsihed - it's possible to create reports by executing ```mvn site``` in cmd from project root directory.  
+If test run was started without ```site``` goal or  **index.html** file was not created after test run finished - it's possible to create reports by executing ```mvn site``` in cmd from project root directory.  
