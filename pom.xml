@@ -10,11 +10,12 @@
 
     <properties> <!-- Version properties-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <aspectj.version>1.8.7</aspectj.version>
         <allure.version>1.8.6</allure.version>
-        <maven_plugin.version>2.2</maven_plugin.version>
         <selenium_drivers.version>2.53.1</selenium_drivers.version>
         <testNG.version>6.9.6</testNG.version>
+        <allure.version>1.4.23</allure.version>
+        <aspectj.version>1.7.4</aspectj.version>
+        <maven_plugin.version>2.2</maven_plugin.version>
     </properties>
 
     <dependencies>
@@ -22,7 +23,7 @@
         <dependency>
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
-            <version>3.0</version>
+            <version>3.7</version>
         </dependency>
 
         <dependency>
@@ -64,14 +65,26 @@
         <dependency> <!--for reporting -->
             <groupId>velocity</groupId>
             <artifactId>velocity</artifactId>
-            <version>1.4</version>
+            <version>1.5</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency><!--Allure-->
+            <groupId>ru.yandex.qatools.allure</groupId>
+            <artifactId>allure-testng-adaptor</artifactId>
+            <version>1.4.14</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ru.yandex.qatools.allure</groupId>
+            <artifactId>allure-maven-plugin</artifactId>
+            <version>${maven_plugin.version}</version>
         </dependency>
 
         <dependency>
             <groupId>org.uncommons</groupId>
             <artifactId>reportng</artifactId>
-            <version>1.1.2</version>
+            <version>1.1.4</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
@@ -93,8 +106,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.17</version>
+                <version>2.14</version>
                 <configuration>
+                    <testFailureIgnore>false</testFailureIgnore>
+                    <argLine>
+                        -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
+                    </argLine>
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/testng/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
@@ -111,13 +128,20 @@
                         </property>
                     </properties>
                 </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.aspectj</groupId>
+                        <artifactId>aspectjweaver</artifactId>
+                        <version>${aspectj.version}</version>
+                    </dependency>
+                </dependencies>
             </plugin>
             <!-- Maven surefire + TestNG + ReportNG -->
             <plugin>
                 <inherited>true</inherited>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.2</version>
+                <version>3.5.1</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
@@ -125,5 +149,20 @@
             </plugin>
         </plugins>
     </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <!--maven should be installed-->
+                <groupId>ru.yandex.qatools.allure</groupId>
+                <artifactId>allure-maven-plugin</artifactId>
+                <version>${maven_plugin.version}</version>
+                <configuration>
+                    <resultsPattern>target/allure-results</resultsPattern>
+                    <reportVersion>1.4.14</reportVersion>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
 
 </project>

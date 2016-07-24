@@ -12,7 +12,7 @@ public class ZD_004_timeLine extends ZoomBaseTest {
 
 
     @Test(dataProviderClass = TestDataProvider.class, dataProvider = TestDataProvider.DP_004_TIME_LINE)
-    public void timeLine(Chart chart) {
+    public void zd_004_timeLine(Chart chart) {
         chartPage = fromHome().openChart(chart)
                 .checkChartLoaded()
                 .onLeftChartPanel()

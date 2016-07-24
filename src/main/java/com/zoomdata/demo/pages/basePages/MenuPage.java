@@ -16,9 +16,9 @@ public class MenuPage extends BasePage {
     }
 
     public static By menuTopPane = By.className("zd-main-header");
-    private static By menuButton = By.xpath(".//*[contains(@value,'showSidePane')]");
+    protected static By menuButton = By.xpath(".//*[contains(@value,'showSidePane')]");
 
-    private static By menuLeftPane = By.xpath(".//div[contains(@class,'zd-side-pane')][.//ancestor::div[1][contains(@style,'display: block')][contains(@class,'sidepane')]]");
+    protected static By menuLeftPane = By.xpath(".//div[contains(@class,'zd-side-pane')][.//ancestor::div[1][contains(@style,'display: block')][contains(@class,'sidepane')]]");
 
     public LeftPaneMenu openLeftMenu() {
         if(!$(menuLeftPane).is(visible)){

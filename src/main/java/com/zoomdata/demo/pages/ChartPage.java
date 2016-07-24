@@ -1,12 +1,12 @@
 package com.zoomdata.demo.pages;
 
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.zoomdata.demo.helpers.WaitHelper;
 import com.zoomdata.demo.pages.basePages.MenuPage;
 import com.zoomdata.demo.pages.leftPaneinChartPages.LeftPaneChart;
 import com.zoomdata.demo.pages.leftPaneinChartPages.SwitchPopupPage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 
@@ -29,6 +29,14 @@ public class ChartPage extends MenuPage {
     By toCurrentTime = By.xpath(".//*[contains(@class,'tooltipDatePicker-content')][contains(@class,'right')]");
     By fromTimeScroller = By.xpath(".//*[contains(@class,'zdView-DragElement')][contains(@class,'left')]");
     By toTimeScroller = By.xpath(".//*[contains(@class,'zdView-DragElement')][contains(@class,'right')]");
+
+    By currentPointContainer = By.id("tid_undefined");
+    By currentPointHeaderValue = By.className("zd_tooltip_info_header");
+
+    By group1Value = By.xpath(".//*[contains(@class,'attrLabel')][contains(.,'Group 1')]//b");
+    By group2Value = By.xpath(".//*//*[contains(@class,'attrLabel')][contains(.,'Group 2')]//b");
+    By colorValue = By.xpath(".//*[contains(@class,'metricLabel')][contains(.,'Color')]//b");
+
 
     public ChartPage(WebDriver driver) {
         super(driver);
@@ -63,7 +71,7 @@ public class ChartPage extends MenuPage {
     public ChartPage checkChartRebuilded() {
         checkElementStatus(chart, NOT_VISIBLE);
         checkChartLoaded();
-        WaitHelper.setImplicitWait(driver, 1);
+        WaitHelper.setImplicitWait(driver, 3);
         $(By.id("progress")).should(exist).should(disappear); //todo: optimize, disappear wait too long
         WaitHelper.setImplicitWaitDefault(driver);
         return this;
@@ -75,14 +83,10 @@ public class ChartPage extends MenuPage {
     }
 
     public ChartPage clickPivotFirstColumn() {
-        clickByOffset(-70, 40);
+        clickOnCanvas(1, 1);
         return this;
     }
 
-    private void clickByOffset(int x, int y) {
-        Actions actions = new Actions(driver);
-        actions.moveToElement($(By.className("widget-label-wrapper")).shouldBe(visible)).moveByOffset(x, y).click().build().perform();
-    }
 
     public ChartPage checkTimeAttribute(String expectedTimeAttribute) {
         $(By.className("attr-indicator")).shouldHave(text(expectedTimeAttribute));
@@ -119,6 +123,64 @@ public class ChartPage extends MenuPage {
     public ChartPage changeToTimeWithScroller() {
         scroll($(toTimeScroller), -200);
         return this;
+    }
+
+    public RadialMenuPage openRadialMenu(double x, double y) {
+        clickOnCanvas(x, y);
+        WaitHelper.waitAdditional(0.5);
+        return new RadialMenuPage(driver);
+    }
+
+
+    public ChartPage clickOnCanvas(double xPercentage, double yPercentage) {
+        Point toBeClicked = getXCanvasPointByPercentage(xPercentage, yPercentage);
+        Point loc = $(menuButton).getLocation();
+        Actions actions = new Actions(driver);
+        actions.moveToElement($(menuButton)).moveByOffset(-loc.getX(), -loc.getY()).perform(); //move to 0,0
+        actions.moveByOffset(toBeClicked.getX(), toBeClicked.getY()).click().build().perform();
+        return this;
+    }
+
+    public ChartPage moveToChartPointInPercent(double xPercentage, double yPercentage) {
+        Point toBeClicked = getXCanvasPointByPercentage(xPercentage, yPercentage);
+        Point loc = $(menuButton).getLocation();
+        Actions actions = new Actions(driver);
+        actions.moveToElement($(menuButton)).moveByOffset(-loc.getX(), -loc.getY()).perform(); //move to 0,0
+        actions.moveByOffset(toBeClicked.getX(), toBeClicked.getY()).build().perform();
+        return this;
+    }
+
+    private Point getXCanvasPointByPercentage(double xPercentage, double yPercentage) {
+        // get point by %,% on canvas (50,50 - will be in the middle of canvas element)
+        int chartWidth = Integer.valueOf($(chart).getAttribute("width"));
+        int chartHeight = Integer.valueOf($(chart).getAttribute("height"));
+        Point chartLocation = $(chart).getLocation();
+        Double x = chartLocation.getX() + (chartWidth * xPercentage / 100);
+        Double y = chartLocation.getY() + (chartHeight * yPercentage / 100);
+        return new Point(x.intValue(), y.intValue());
+    }
+
+    public String getCurrentPointXValue() {
+        return $(currentPointContainer).find(currentPointHeaderValue).getText().split(", ")[0].trim();
+    }
+
+    public String getCurrentPointYValue() {
+        return $(currentPointContainer).find(currentPointHeaderValue).getText().split(", ")[1].trim();
+    }
+
+    public ChartPage changeAttributeInZoomPopup(String attributeName) {
+        $(By.xpath(".//*[contains(@data-name,'Zoom Into')]")).find(By.xpath(".//li[.//*[text()='" + attributeName + "']]")).should(visible).click();
+        return  this;
+    }
+
+    public ChartPage checkGroup1Value(String expectedValue) {
+        $(group1Value).shouldHave(text(expectedValue));
+        return  this;
+    }
+
+    public ChartPage checkGroup2ValueEquals(String expectedValue) {
+        $(group2Value).shouldHave(text(expectedValue));
+        return  this;
     }
 
 

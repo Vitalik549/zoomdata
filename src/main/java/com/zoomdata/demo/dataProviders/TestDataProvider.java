@@ -38,7 +38,7 @@ public class TestDataProvider {
 
     @DataProvider(name = DP_005_RADIAL_MENU_ZOOM)
     private static Object[][] dp_005_radialMenuZoom() {
-        return new Object[][]{{new Chart(sqlSource, "Heat Map")}};
+        return new Object[][]{{new Chart(sqlSource, "Heat Map"){{setTimeAttribute("Product Group");}}}};
     }
 
 
