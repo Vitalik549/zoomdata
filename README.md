@@ -1,6 +1,7 @@
 # zoomdata
 
 ###Project description:
+Automation test project for regression testing of zoomdata application.
 1. Java + Maven + TestNG + Selenium + Selenide project.
 2. TestNG suite location: \src\test\resources\testng\testng.xml
 3. By a default suite would be executed in 5 parallel threads > could be changed in testng.xml, property <thread-count>
