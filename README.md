@@ -14,10 +14,7 @@ Allure reporting tool may be used, but not required.
 
 
 ###Maven installation:
- :warning: *Please ensure than Maven is installed by execution of the next command in cmd:* 
-```  
-mvn --version  
-```  
+ :warning: *Please ensure than Maven is installed by execution of the next command in cmd:* ```  mvn --version  ```  
 *Info how to install Maven is [here](https://github.com/Vitalik549/zoomdata/)*
 
 
@@ -31,10 +28,10 @@ mvn --version
 1. go to local root project directory  
 2. execute next script:  
 ```  
-mvn clean test -Dtest=%classname -Dbrowser=$browsername  
+mvn clean test -Dtest=%classname -Dbrowser=%browsername  
 ```  
 
 Where:  
 ``` %classname```  - name of the test class  
-``` $browsername```  - indicate browser in which tests should be executed, possible values: chrome, firefox, internetexplorer.  
-If no browser property set - tests will be executed in chrome by a default.  
+``` %browsername```  - indicate browser in which tests should be executed, possible values: chrome, firefox, internetexplorer.  
+If no browser property set - tests will be executed in **chrome** by a default.  
